@@ -1,0 +1,690 @@
+/* Base Styles */
+
+@import url('https://fonts.googleapis.com/css2?family=Fleur+De+Leah&family=Fredoka:wght@300..700&family=Sarabun:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+@font-face {
+    font-family: Chalisa;
+    src: url(../fonts/Chalisa-Oktavia.ttf);
+}
+
+@font-face {
+    font-family: Montserrat;
+    src: url(../fonts/Montserrat-Regular.ttf);
+}
+
+@font-face {
+    font-family: Geofanny;
+    src: url(../fonts/Geofanny.otf);
+}
+body {
+    background: linear-gradient(to bottom, #ffffff, #ffffff);
+    color: white;
+    font-family: "Chalisa", sans-serif;
+}
+body, html {
+    overflow-x: clip;
+}
+h1,h2,h3,h4,h5,h6{
+    color: black;
+}
+p{
+    color: black;
+    font-family: 'Sarabun';
+    font-size: 17px;
+}
+header {
+    background-color: #ffc3cb;
+}
+
+.text-countdown {
+    font-size: 34px;
+    color: #ff3e3e;
+}
+
+.blinking-text {
+    font-size: 4rem;
+    font-weight: bold;
+    text-align: center;
+    font-family: "Fleur De Leah", cursive;
+    color: #ff5c5c;
+    text-shadow: 0 0 10px #ffffff, 0 0 20px #ffffff, 0 0 30px #ff0000, 0 0 40px #ff0000;
+    animation: blinkShadow 1.5s infinite;
+    margin-top: 20px;
+}
+@keyframes blinkShadow {
+    0% {
+        text-shadow: 0 0 10px #ffffff, 0 0 20px #ffffff, 0 0 30px #ff0000, 0 0 40px #ff0000;
+    }
+    50% {
+        text-shadow: 0 0 5px #ff0000, 0 0 10px #ff4500, 0 0 20px #ff4500, 0 0 30px #ff4500;
+    }
+    100% {
+        text-shadow: 0 0 10px #ffffff, 0 0 20px #ffffff, 0 0 30px #ff0000, 0 0 40px #ff0000;
+    }
+}
+
+/* Nút bấm âm lượng */
+.mute-icon {
+    font-size: 30px;
+    top: 10px;
+    left: 10px;
+    z-index: 3;
+    padding: 20px;
+    position: fixed;
+    color: #ffd700;
+    transition: 1s all;
+}
+
+.d-none {
+    display: none;
+}
+
+/* Snowflakes */
+#snowflakes-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+.snowflake {
+    position: absolute;
+    color: white;
+    font-size: 1.5rem;
+    animation: fall linear infinite;
+    opacity: 0.8;
+}
+.round-snowflake {
+    background-color: white; /* Màu bông tuyết */
+    border-radius: 50%; /* Hình tròn */
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.8); /* Hiệu ứng ánh sáng */
+}
+@keyframes fall {
+    0% {
+        transform: translateY(-100%);
+    }
+    100% {
+        transform: translateY(100vh);
+    }
+}
+
+/* satanflakes */
+#satanflakes-container {
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+.satanflake {
+    position: absolute;
+    color: white;
+    font-size: 1.5rem;
+    animation: fall linear infinite;
+    opacity: 0.8;
+}
+.round-satanflake {
+    background-color: white; /* Màu bông tuyết */
+    border-radius: 50%; /* Hình tròn */
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.8); /* Hiệu ứng ánh sáng */
+}
+@keyframes fall {
+    0% {
+        transform: translateY(-100%);
+    }
+    100% {
+        transform: translateY(100vh);
+    }
+}
+
+/* pinetreeflakes */
+#pinetreeflakes-container {
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+.pinetreeflake {
+    position: absolute;
+    color: white;
+    font-size: 1.5rem;
+    animation: fall linear infinite;
+    opacity: 0.8;
+}
+.round-pinetreeflake {
+    background-color: white; /* Màu bông tuyết */
+    border-radius: 50%; /* Hình tròn */
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.8); /* Hiệu ứng ánh sáng */
+}
+@keyframes fall {
+    0% {
+        transform: translateY(-100%);
+    }
+    100% {
+        transform: translateY(100vh);
+    }
+}
+
+
+/* snowmanflakes */
+#snowmanflakes-container {
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+.snowmanflake {
+    position: absolute;
+    color: white;
+    font-size: 1.5rem;
+    animation: fall linear infinite;
+    opacity: 0.8;
+}
+.round-snowmanflake {
+    background-color: white; /* Màu bông tuyết */
+    border-radius: 50%; /* Hình tròn */
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.8); /* Hiệu ứng ánh sáng */
+}
+@keyframes fall {
+    0% {
+        transform: translateY(-100%);
+    }
+    100% {
+        transform: translateY(100vh);
+    }
+}
+
+
+/* reindeerflakes */
+#reindeerflakes-container {
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+.reindeerflake {
+    position: absolute;
+    color: white;
+    font-size: 1.5rem;
+    animation: fall linear infinite;
+    opacity: 0.8;
+}
+.round-reindeerflake {
+    background-color: white; /* Màu bông tuyết */
+    border-radius: 50%; /* Hình tròn */
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.8); /* Hiệu ứng ánh sáng */
+}
+@keyframes fall {
+    0% {
+        transform: translateY(-100%);
+    }
+    100% {
+        transform: translateY(100vh);
+    }
+}
+
+/* socksflakes */
+#socksflakes-container {
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+.socksflake {
+    position: absolute;
+    color: white;
+    font-size: 1.5rem;
+    animation: fall linear infinite;
+    opacity: 0.8;
+}
+.round-socksflake {
+    background-color: white; /* Màu bông tuyết */
+    border-radius: 50%; /* Hình tròn */
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.8); /* Hiệu ứng ánh sáng */
+}
+@keyframes fall {
+    0% {
+        transform: translateY(-100%);
+    }
+    100% {
+        transform: translateY(100vh);
+    }
+}
+
+/* giftflakes */
+#giftflakes-container {
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+.giftflake {
+    position: absolute;
+    color: white;
+    font-size: 1.5rem;
+    animation: fall linear infinite;
+    opacity: 0.8;
+}
+.round-giftflake {
+    background-color: white; /* Màu bông tuyết */
+    border-radius: 50%; /* Hình tròn */
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.8); /* Hiệu ứng ánh sáng */
+}
+@keyframes fall {
+    0% {
+        transform: translateY(-100%);
+    }
+    100% {
+        transform: translateY(100vh);
+    }
+}
+
+/* Button Effect */
+.sparkle-button {
+    background: linear-gradient(45deg, #ffd700, #ff6f61);
+    border: none;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.sparkle-button:hover {
+    background-color: #ff6f61;
+    transform: scale(1.1);
+}
+#countdown {
+    font-weight: bold;
+    letter-spacing: 2px;
+    position: relative;
+    z-index: 2; /* Đảm bảo countdown nằm trên ảnh */
+    color: #ff3e3e; /* Màu chữ của countdown */
+}
+.full-background {
+    position: relative;
+    background-size: cover; /* Đảm bảo ảnh nền phủ toàn bộ màn hình */
+    background-position: center; /* Căn giữa ảnh nền */
+    height: 100vh; /* Đảm bảo chiều cao của phần tử bằng chiều cao màn hình */
+    /* display: flex; */
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; /* Đảm bảo ảnh không bị tràn ra ngoài */
+    
+}
+.overlay-image {
+    position: absolute;
+    width: 50%; /* Đảm bảo kích thước đám mây hợp lý */
+    object-fit: contain; /* Giữ tỷ lệ ảnh */
+}
+.cloud-container {
+    /* position: relative; */
+    width: 100%;
+    height: 100%; /* Chiều cao toàn màn hình */
+}
+/* Vị trí cho các đám mây */
+.cloud-1 {
+    left: -4px;
+    bottom: -37px;
+    animation: moveClouds1 9s linear infinite;
+}
+
+.cloud-2 {
+    left: 23%;
+    bottom: -37px;
+    animation: moveClouds2 8s linear infinite;
+}
+.cloud-3 {
+    right: 21%;
+    bottom: -37px;
+    animation: moveClouds3 7s linear infinite;
+}
+.cloud-4 {
+    right: -5%;
+    bottom: -37px;
+    animation: moveClouds4 6s linear infinite;
+}
+
+.ongnoel{
+    display: block;
+    z-index: 99999999;
+    bottom: 0;
+    position: absolute;
+    animation: moveNoel 5s linear infinite; 
+}
+.bongtuyet{
+    display: block;
+    bottom: 40px;
+    left: 14%;
+    position: absolute;
+    transform: rotate(-21deg);
+    animation: movebongtuyet 5s linear infinite; 
+    animation-fill-mode: forwards;
+}
+.khungtuyet{
+    position: absolute;
+    display: block;
+    top: 0;
+    width: 50%;
+    right: 0;
+}
+.khungtuyet1{
+    position: absolute;
+    display: block;
+    top: 0;
+    width: 50%;
+    left: 0;
+}
+.full-background::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Overlay màu đen với độ trong suốt */
+    z-index: -1; /* Đưa overlay ra sau nội dung */
+}
+@keyframes moveClouds1 {
+    0% {
+        transform: translateX(0); /* Bắt đầu ở vị trí ban đầu */
+    }
+    25% {
+        transform: translateX(-2%); /* Di chuyển nhẹ sang trái */
+    }
+    50% {
+        transform: translateX(0); /* Quay lại vị trí ban đầu */
+    }
+    75% {
+        transform: translateX(0.5%); /* Di chuyển nhẹ sang phải */
+    }
+    100% {
+        transform: translateX(0); /* Quay lại vị trí ban đầu */
+    }
+}
+@keyframes moveClouds2 {
+    0% {
+        transform: translateX(0); /* Bắt đầu ở vị trí ban đầu */
+    }
+    25% {
+        transform: translateX(-2%); /* Di chuyển nhẹ sang trái */
+    }
+    50% {
+        transform: translateX(0); /* Quay lại vị trí ban đầu */
+    }
+    75% {
+        transform: translateX(2%); /* Di chuyển nhẹ sang phải */
+    }
+    100% {
+        transform: translateX(0); /* Quay lại vị trí ban đầu */
+    }
+}
+@keyframes moveClouds3 {
+    0% {
+        transform: translateX(0); /* Bắt đầu ở vị trí ban đầu */
+    }
+    25% {
+        transform: translateX(-3%); /* Di chuyển nhẹ sang trái */
+    }
+    50% {
+        transform: translateX(0); /* Quay lại vị trí ban đầu */
+    }
+    75% {
+        transform: translateX(3%); /* Di chuyển nhẹ sang phải */
+    }
+    100% {
+        transform: translateX(0); /* Quay lại vị trí ban đầu */
+    }
+}
+@keyframes moveClouds4 {
+    0% {
+        transform: translateX(0); /* Bắt đầu ở vị trí ban đầu */
+    }
+    25% {
+        transform: translateX(-3%); /* Di chuyển nhẹ sang trái */
+    }
+    50% {
+        transform: translateX(0); /* Quay lại vị trí ban đầu */
+    }
+    75% {
+        transform: translateX(3%); /* Di chuyển nhẹ sang phải */
+    }
+    100% {
+        transform: translateX(0); /* Quay lại vị trí ban đầu */
+    }
+}
+@keyframes movebongtuyet {
+    0% {
+        transform: translateX(0) rotate(-21deg); /* Vị trí ban đầu */
+    }
+    25% {
+        transform: translateX(-2%) rotate(-21deg); /* Sang trái */
+    }
+    50% {
+        transform: translateX(3%) rotate(-21deg); /* Quay lại */
+    }
+    75% {
+        transform: translateX(2%) rotate(-21deg); /* Sang phải */
+    }
+    100% {
+        transform: translateX(0) rotate(-21deg); /* Quay về vị trí ban đầu */
+    }
+}
+@keyframes moveNoel {
+    0% {
+        transform: translateX(0); /* Bắt đầu ở vị trí ban đầu */
+    }
+    25% {
+        transform: translateX(-2%); /* Di chuyển nhẹ sang trái */
+    }
+    50% {
+        transform: translateX(3%); /* Quay lại vị trí ban đầu */
+    }
+    75% {
+        transform: translateX(2%); /* Di chuyển nhẹ sang phải */
+    }
+    100% {
+        transform: translateX(0); /* Quay lại vị trí ban đầu */
+    }
+}
+@keyframes moveMaygiao {
+    0% {
+        transform: translateY(-40%); /* Bắt đầu với vị trí dịch lên */
+    }
+    25% {
+        transform: translateY(calc(-40% - 7px)); /* Dịch lên thêm */
+    }
+    50% {
+        transform: translateY(calc(-40% + 7px)); /* Dịch xuống */
+    }
+    75% {
+        transform: translateY(calc(-40% - 7px)); /* Dịch lên lại */
+    }
+    100% {
+        transform: translateY(-40%); /* Quay lại vị trí dịch lên ban đầu */
+    }
+}
+
+.maygiaonhau { 
+    position: absolute;
+    display: flex;
+    justify-content: center; /* Căn giữa nội dung theo chiều ngang */
+    align-items: center; /* Căn giữa nội dung theo chiều dọc */
+    height: 100vh; /* Chiều cao chiếm toàn bộ chiều cao màn hình */
+    width: 100%; /* Chiều rộng chiếm toàn bộ màn hình */
+    z-index: 1;
+    animation: moveMaygiao 7s ease-in-out infinite; /* Hiệu ứng chuyển động */
+}
+
+.maygiao {
+    position: relative;
+    max-width: 100%; /* Đảm bảo ảnh không vượt quá chiều rộng khung cha */
+    object-fit: contain; /* Đảm bảo ảnh giữ đúng tỷ lệ */
+}
+@media screen and (max-width: 480px) {
+    .cloud-1 {
+        bottom: -5px;
+    }
+    .cloud-2 {
+        bottom: 6px;
+    }
+    .cloud-3 {
+        bottom: 0px;
+    }
+    .cloud-4 {
+        bottom: 2px;
+    }
+    .maygiaonhau {
+        height: 18vh; /* Giảm chiều cao trên màn hình nhỏ nhất */
+    }
+    .full-background {
+        height: 26vh /* Giảm chiều cao trên màn hình nhỏ hơn */
+    }
+}
+@media screen and (min-width: 480px) {
+    .maygiaonhau {
+        height: 18vh; /* Giảm chiều cao trên màn hình nhỏ nhất */
+    }
+    .full-background {
+        height: 36vh /* Giảm chiều cao trên màn hình nhỏ hơn */
+    }
+}
+@media screen and (min-width: 576px) {
+    .maygiaonhau {
+        height: 27vh; /* Giảm chiều cao trên màn hình nhỏ hơn */
+    }
+    .full-background {
+        height: 43vh; /* Giảm chiều cao trên màn hình nhỏ hơn */
+    }
+}
+@media screen and (min-width: 768px) {
+    .maygiaonhau {
+        height: 27vh; /* Giảm chiều cao trên màn hình nhỏ hơn */
+    }
+    .full-background {
+        height: 57vh; /* Giảm chiều cao trên màn hình nhỏ hơn */
+    }
+}
+@media screen and (min-width: 992px) {
+    .maygiaonhau {
+        height: 27vh; /* Giảm chiều cao trên màn hình nhỏ hơn */
+    }
+    .full-background {
+        height: 80vh; /* Giảm chiều cao trên màn hình nhỏ hơn */
+    }
+}
+@media screen and (min-width: 1200px) {
+    .maygiaonhau {
+        height: 27vh; /* Giảm chiều cao trên màn hình nhỏ hơn */
+    }
+    .full-background {
+        height: 98vh; /* Giảm chiều cao trên màn hình nhỏ hơn */
+    }
+}
+@media screen and (min-width: 1400px) {
+    .maygiaonhau {
+        height: 27vh; /* Giảm chiều cao trên màn hình nhỏ hơn */
+    }
+    .full-background {
+        height: 100vh; /* Giảm chiều cao trên màn hình nhỏ hơn */
+    }
+}
+/* Khởi đầu ẩn */
+.animate-left, .animate-right {
+    opacity: 0;
+    transform: translateX(-150%);
+    transition: transform 2s ease, opacity 3s ease;
+    will-change: transform, opacity;
+}
+
+/* Xuất hiện từ bên phải */
+.animate-right {
+    transform: translateX(150%);
+}
+
+/* Khi xuất hiện */
+.show {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* Thêm độ trễ */
+.animate-left.show {
+    transition-delay: 0.3s;
+}
+
+.animate-right.show {
+    transition-delay: 0.3s;
+}
+.imageborder{
+    border-radius: 30px;
+}
+
+.footer {
+    position: relative;
+    width: 100%;
+    height: 500px;
+    background-image: url(../image/nen7.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.content-footer {
+    width: 300px;
+    margin-left: 78%;
+    text-align: center;
+}
+
+.content-footer h1,
+.content-footer p {
+    color: #fff;
+}
+
+.content-footer h1 {
+    margin-top: 100px;
+    font-size: 50px;
+}
+
+.d-flex {
+    list-style: none;
+    display: flex;
+}
+
+.d-flex a {
+    color: #fff;
+    padding: 20px;
+    font-size: 30px;
+}
+/* Đặt nút hộp quà bên trái và giữa footer */
+.gift-btn {
+    position: absolute;
+    left: 31%;
+    top: 83%;
+    transform: translateY(-50%);
+    background-color: #ff0000; /* Màu nền đỏ */
+    color: #fff;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.gift-btn:hover {
+    background-color: #d40000; /* Màu khi hover */
+    transform: translateY(-50%) scale(1.1);
+}
+
+.close-btn {
+    margin-top: 15px;
+    padding: 8px 15px;
+    background: #e53935;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.close-btn:hover {
+    background: #c62828;
+}
