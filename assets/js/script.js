@@ -285,27 +285,28 @@ $(document).ready(function () {
 
   // Bắt sự kiện click vào biểu tượng âm thanh
   const enableAudio = () => {
-      audio.play();
+    audio.play();
   };
 
   // Xử lý nút tắt tiếng
   unmuteButton.addEventListener("click", () => {
-      audio.volume = 0;
-      muteButton.style.display = "block";
-      unmuteButton.style.display = "none";
+    audio.volume = 0;
+    muteButton.style.display = "block";
+    unmuteButton.style.display = "none";
   });
 
   // Xử lý nút bật tiếng
   muteButton.addEventListener("click", () => {
-      audio.volume = 1;
-      muteButton.style.display = "none";
-      unmuteButton.style.display = "block";
-      enableAudio();
+    audio.volume = 1;
+    muteButton.style.display = "none";
+    unmuteButton.style.display = "block";
+    enableAudio();
   });
 });
+
 function getRandomColor() {
-  const letters = '0123456789ABCDEF';
-  let color = '#';
+  const letters = "0123456789ABCDEF";
+  let color = "#";
   for (let i = 0; i < 6; i++) {
     color += letters[Math.floor(Math.random() * 16)];
   }
@@ -313,41 +314,9 @@ function getRandomColor() {
 }
 
 function getRandomAnimation() {
-  const animations = ['float', 'blink', 'wiggle', 'pulse'];
+  const animations = ["float", "blink", "wiggle", "pulse"];
   return animations[Math.floor(Math.random() * animations.length)];
 }
-
-function addWish() {
-  const wishInput = document.getElementById('wish');
-  const wishText = wishInput.value.trim();
-
-  if (!wishText) {
-    alert("Please enter a wish!");
-    return;
-  }
-
-  const tree = document.getElementById('tree');
-  const wishNode = document.createElement('div');
-  wishNode.className = 'wish';
-  wishNode.innerHTML = `<strong>📜 </strong>${wishText.substring(0, 50)}${wishText.length > 50 ? '...' : ''}`;
-
-  // Random color and animation
-  wishNode.style.color = getRandomColor();
-  wishNode.style.animation = `${getRandomAnimation()} 3s ease-in-out infinite, blink 1s infinite alternate`;
-
-  // Random position
-  const maxX = tree.clientWidth - 150;
-  const maxY = tree.clientHeight - 150;
-  const posX = Math.random() * maxX;
-  const posY = Math.random() * maxY;
-
-  wishNode.style.left = `${posX}px`;
-  wishNode.style.top = `${posY}px`;
-
-  tree.appendChild(wishNode);
-  wishInput.value = '';
-}
-
 const wishes = [
   "Mong bạn luôn hạnh phúc và thành công!",
   "Chúc bạn một năm mới tràn đầy niềm vui và sức khỏe!",
@@ -368,16 +337,17 @@ const wishes = [
   "Chúc bạn có một cuộc sống tràn đầy sức khỏe và niềm vui bất tận!",
   "Hy vọng bạn luôn tìm thấy sự an yên trong những thử thách cuộc sống!",
   "Chúc bạn luôn giữ được sự lạc quan và can đảm vượt qua mọi khó khăn!",
-  "Mong rằng bạn sẽ luôn đạt được những thành công lớn trong công việc và cuộc sống!"
+  "Mong rằng bạn sẽ luôn đạt được những thành công lớn trong công việc và cuộc sống!",
 ];
 
 // Gán sẵn các lời chúc lên cây thông ở vị trí ngẫu nhiên khi trang được tải
 window.onload = function () {
-  wishes.forEach(wish => {
-    const tree = document.getElementById('tree');
-    const wishNode = document.createElement('div');
-    wishNode.className = 'wish';
-    wishNode.innerHTML = `<strong>📜 </strong>${wish.substring(0, 50)}${wish.length > 50 ? '...' : ''}`;
+  wishes.forEach((wish) => {
+    const tree = document.getElementById("tree");
+    const wishNode = document.createElement("div");
+    wishNode.className = "wish";
+
+    wishNode.innerHTML = `<div class="wish-btn" style="cursor: pointer;"><strong>📜 </strong>${wish.substring(0, 50)}${wish.length > 50 ? "..." : ""}</div>`;
 
     // Random color and animation
     wishNode.style.color = getRandomColor();
@@ -392,9 +362,100 @@ window.onload = function () {
     wishNode.style.left = `${posX}px`;
     wishNode.style.top = `${posY}px`;
 
+    // Thêm sự kiện click để hiển thị thiệp
+    wishNode.addEventListener("click", function () {
+      const wishContent = document.getElementById("wishContent");
+
+      // Thiết lập nội dung thiệp
+      wishContent.innerHTML = `
+        <div class="card wishCard show">
+        <div class="imgBox">
+          <div class="bark"></div>
+          <img src="https://github.com/Panbap/datapanbap/blob/main/image/mery.png?raw=true">
+        </div>
+        <div class="details">
+          <h4 class="color2 margin">🎄 MERRY CHRISTMAS 🎄</h4>
+          <p class="text-center">${wish}</p>
+          <button id="closeCard">X</button>
+        </div>
+      </div>
+      `;
+
+      document.getElementById("closeCard").addEventListener("click", function () {
+        wishContent.querySelector(".wishCard").classList.remove("show");
+        wishContent.querySelector(".wishCard").classList.add("hidden");
+      });
+    });
+
     tree.appendChild(wishNode);
   });
 };
 
 
+function addWish() {
+  const wishInput = document.getElementById("wish");
+  const wishText = wishInput.value.trim();
 
+  if (!wishText) {
+    alert("Bạn chưa nhập lời chúc kìa!");
+    return;
+  }
+
+  const tree = document.getElementById("tree");
+  const wishNode = document.createElement("div");
+  wishNode.className = "wish";
+
+  const uniqueID = `wish-${Date.now()}`;
+  // wishNode.innerHTML = `<button class="wish-btn" data-id="${uniqueID}">📜 ${wishText.substring(
+  //   0,
+  //   50
+  // )}${wishText.length > 50 ? "..." : ""}</button>`;
+  wishNode.innerHTML = `<div class="wish-btn" data-id="${uniqueID}" style="cursor: pointer;"><strong>📜 </strong>${wishText.substring(0, 50)}${wishText.length > 50 ? "..." : ""}</div>`;
+
+  wishNode.querySelector(".wish-btn").addEventListener("click", function () {
+    const wishContent = document.getElementById("wishContent");
+
+    wishContent.innerHTML = `
+      <div class="card wishCard show">
+        <div class="imgBox">
+          <div class="bark"></div>
+          <img src="https://github.com/Panbap/datapanbap/blob/main/image/mery.png?raw=true">
+        </div>
+        <div class="details">
+          <h4 class="color2 margin">🎄 MERRY CHRISTMAS 🎄</h4>
+          <p class="text-center">${wishText}</p>
+          <button id="closeCard">X</button>
+        </div>
+      </div>
+    `;
+
+    // Đóng thiệp khi click vào nút đóng
+    document.getElementById("closeCard").addEventListener("click", function () {
+      wishContent.querySelector(".wishCard").classList.remove("show");
+      wishContent.querySelector(".wishCard").classList.add("hidden");
+    });
+  });
+
+  wishNode.style.color = getRandomColor();
+  wishNode.style.animation = `${getRandomAnimation()} 3s ease-in-out infinite, blink 1s infinite alternate`;
+
+  const maxX = tree.clientWidth - 150;
+  const maxY = tree.clientHeight - 150;
+  const posX = Math.random() * maxX;
+  const posY = Math.random() * maxY;
+
+  wishNode.style.left = `${posX}px`;
+  wishNode.style.top = `${posY}px`;
+
+  tree.appendChild(wishNode);
+  wishInput.value = "";
+}
+
+
+// Đóng thiệp
+document.getElementById("closeButton").addEventListener("click", function () {
+  const guideInfo = document.getElementById("guideInfo");
+
+  guideInfo.classList.remove("show");
+  guideInfo.classList.add("hidden");
+});
