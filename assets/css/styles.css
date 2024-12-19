@@ -617,20 +617,32 @@ header {
 .imageborder{
     border-radius: 30px;
 }
-
+.main-footer{
+    height: 432px;
+    margin: 0 auto;
+    padding: 0;
+}
 .footer {
+    height: -webkit-fill-available;
     position: relative;
-    width: 100%;
-    height: 500px;
-    background-image: url(../image/nen7.png);
+    background-image: url(../image/nen7-1.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.footer-right{
+    height: -webkit-fill-available;
+    background-image: url(../image/nen7-2.png);
     background-size: cover;
     background-repeat: no-repeat;
 }
-
+.contact{
+    justify-content: center;
+}
 .content-footer {
-    width: 300px;
-    margin-left: 78%;
+    width: 100%;
     text-align: center;
+    display: contents;
 }
 
 .content-footer h1,
@@ -656,9 +668,9 @@ header {
 /* Đặt nút hộp quà bên trái và giữa footer */
 .gift-btn {
     position: absolute;
-    left: 31%;
-    top: 83%;
-    transform: translateY(-50%);
+    top: 78%;
+    left: 46%;
+    transform: translate(-50%, -50%);
     background-color: #ff0000; /* Màu nền đỏ */
     color: #fff;
     font-size: 20px;
@@ -672,7 +684,7 @@ header {
 
 .gift-btn:hover {
     background-color: #d40000; /* Màu khi hover */
-    transform: translateY(-50%) scale(1.1);
+    transform: translate(-50%, -50%) scale(1.1);
 }
 
 .close-btn {
