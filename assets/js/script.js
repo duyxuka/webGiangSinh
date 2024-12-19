@@ -303,5 +303,92 @@ $(document).ready(function () {
       enableAudio();
   });
 });
+function getRandomColor() {
+  const colors = ['#FF5733', '#FFC300', '#DAF7A6', '#FFC0CB', '#ADD8E6', '#7FFF00'];
+  return colors[Math.floor(Math.random() * colors.length)];
+}
+
+function getRandomAnimation() {
+  const animations = ['float', 'blink', 'wiggle', 'pulse'];
+  return animations[Math.floor(Math.random() * animations.length)];
+}
+
+function addWish() {
+  const wishInput = document.getElementById('wish');
+  const wishText = wishInput.value.trim();
+
+  if (!wishText) {
+      alert("Please enter a wish!");
+      return;
+  }
+
+  const tree = document.getElementById('tree');
+  const wishNode = document.createElement('div');
+  wishNode.className = 'wish';
+  wishNode.innerHTML = `<strong>📜 </strong>${wishText.substring(0, 50)}${wishText.length > 50 ? '...' : ''}`;
+
+  // Random color and animation
+  wishNode.style.color = getRandomColor();
+  wishNode.style.animation = `${getRandomAnimation()} 3s ease-in-out infinite, blink 1s infinite alternate`;
+
+  // Random position
+  const maxX = tree.clientWidth - 150;
+  const maxY = tree.clientHeight - 150;
+  const posX = Math.random() * maxX;
+  const posY = Math.random() * maxY;
+
+  wishNode.style.left = `${posX}px`;
+  wishNode.style.top = `${posY}px`;
+
+  tree.appendChild(wishNode);
+  wishInput.value = '';
+}
+
+const wishes = [
+  "Mong bạn luôn hạnh phúc và thành công!",
+  "Chúc bạn một năm mới tràn đầy niềm vui và sức khỏe!",
+  "Hy vọng mọi ước mơ của bạn sẽ thành hiện thực.",
+  "Chúc bạn luôn gặp may mắn trong mọi việc.",
+  "Mong bạn có một cuộc sống đầy yêu thương và hạnh phúc.",
+  "Chúc bạn luôn mạnh mẽ và vững vàng trong mọi thử thách.",
+  "Chúc bạn một mùa Giáng sinh an lành và ấm áp!",
+  "Hy vọng bạn sẽ tìm thấy hạnh phúc trong những điều nhỏ bé.",
+  "Chúc bạn mọi điều tốt đẹp trong cuộc sống và công việc.",
+  "Mong bạn có một cuộc sống viên mãn và đầy ý nghĩa.",
+  "Chúc bạn luôn thành công trong mọi dự định của mình!",
+  "Mong rằng năm mới sẽ mang lại nhiều niềm vui và hạnh phúc cho bạn!",
+  "Chúc bạn tìm được bình an trong tâm hồn và niềm vui trong công việc!",
+  "Hy vọng bạn sẽ có một năm tràn đầy may mắn và sự nghiệp thăng tiến!",
+  "Chúc bạn đạt được tất cả mục tiêu của mình trong năm nay!",
+  "Mong bạn sẽ luôn giữ được nụ cười trên môi và tình yêu trong trái tim!",
+  "Chúc bạn có một cuộc sống tràn đầy sức khỏe và niềm vui bất tận!",
+  "Hy vọng bạn luôn tìm thấy sự an yên trong những thử thách cuộc sống!",
+  "Chúc bạn luôn giữ được sự lạc quan và can đảm vượt qua mọi khó khăn!",
+  "Mong rằng bạn sẽ luôn đạt được những thành công lớn trong công việc và cuộc sống!"
+];
+
+
+// Gán sẵn các lời chúc lên cây thông ở vị trí ngẫu nhiên
+wishes.forEach(wish => {
+  const tree = document.getElementById('tree');
+  const wishNode = document.createElement('div');
+  wishNode.className = 'wish';
+  wishNode.innerHTML = `<strong>📜 </strong>${wish.substring(0, 50)}${wish.length > 50 ? '...' : ''}`;
+
+  // Random color and animation
+  wishNode.style.color = getRandomColor();
+  wishNode.style.animation = `${getRandomAnimation()} 3s ease-in-out infinite, blink 1s infinite alternate`;
+
+  // Random position
+  const maxX = tree.clientWidth - 150;
+  const maxY = tree.clientHeight - 150;
+  const posX = Math.random() * maxX;
+  const posY = Math.random() * maxY;
+
+  wishNode.style.left = `${posX}px`;
+  wishNode.style.top = `${posY}px`;
+
+  tree.appendChild(wishNode);
+});
 
 
