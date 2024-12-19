@@ -304,8 +304,12 @@ $(document).ready(function () {
   });
 });
 function getRandomColor() {
-  const colors = ['#FF5733', '#FFC300', '#DAF7A6', '#FFC0CB', '#ADD8E6', '#7FFF00'];
-  return colors[Math.floor(Math.random() * colors.length)];
+  const letters = '0123456789ABCDEF';
+  let color = '#';
+  for (let i = 0; i < 6; i++) {
+    color += letters[Math.floor(Math.random() * 16)];
+  }
+  return color;
 }
 
 function getRandomAnimation() {
@@ -318,8 +322,8 @@ function addWish() {
   const wishText = wishInput.value.trim();
 
   if (!wishText) {
-      alert("Please enter a wish!");
-      return;
+    alert("Please enter a wish!");
+    return;
   }
 
   const tree = document.getElementById('tree');
@@ -367,28 +371,30 @@ const wishes = [
   "Mong rằng bạn sẽ luôn đạt được những thành công lớn trong công việc và cuộc sống!"
 ];
 
+// Gán sẵn các lời chúc lên cây thông ở vị trí ngẫu nhiên khi trang được tải
+window.onload = function () {
+  wishes.forEach(wish => {
+    const tree = document.getElementById('tree');
+    const wishNode = document.createElement('div');
+    wishNode.className = 'wish';
+    wishNode.innerHTML = `<strong>📜 </strong>${wish.substring(0, 50)}${wish.length > 50 ? '...' : ''}`;
 
-// Gán sẵn các lời chúc lên cây thông ở vị trí ngẫu nhiên
-wishes.forEach(wish => {
-  const tree = document.getElementById('tree');
-  const wishNode = document.createElement('div');
-  wishNode.className = 'wish';
-  wishNode.innerHTML = `<strong>📜 </strong>${wish.substring(0, 50)}${wish.length > 50 ? '...' : ''}`;
+    // Random color and animation
+    wishNode.style.color = getRandomColor();
+    wishNode.style.animation = `${getRandomAnimation()} 3s ease-in-out infinite, blink 1s infinite alternate`;
 
-  // Random color and animation
-  wishNode.style.color = getRandomColor();
-  wishNode.style.animation = `${getRandomAnimation()} 3s ease-in-out infinite, blink 1s infinite alternate`;
+    // Random position
+    const maxX = tree.clientWidth - 150;
+    const maxY = tree.clientHeight - 150;
+    const posX = Math.random() * maxX;
+    const posY = Math.random() * maxY;
 
-  // Random position
-  const maxX = tree.clientWidth - 150;
-  const maxY = tree.clientHeight - 150;
-  const posX = Math.random() * maxX;
-  const posY = Math.random() * maxY;
+    wishNode.style.left = `${posX}px`;
+    wishNode.style.top = `${posY}px`;
 
-  wishNode.style.left = `${posX}px`;
-  wishNode.style.top = `${posY}px`;
+    tree.appendChild(wishNode);
+  });
+};
 
-  tree.appendChild(wishNode);
-});
 
 
