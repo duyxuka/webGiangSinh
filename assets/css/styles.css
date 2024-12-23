@@ -1,6 +1,7 @@
 /* Base Styles */
 
 @import url('https://fonts.googleapis.com/css2?family=Fleur+De+Leah&family=Fredoka:wght@300..700&family=Sarabun:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+
 @font-face {
     font-family: Chalisa;
     src: url(../fonts/Chalisa-Oktavia.ttf);
@@ -15,22 +16,33 @@
     font-family: Geofanny;
     src: url(../fonts/Geofanny.otf);
 }
+
 body {
     background: linear-gradient(to bottom, #ffffff, #ffffff);
     color: white;
     font-family: "Chalisa", sans-serif;
 }
-body, html {
+
+body,
+html {
     overflow-x: clip;
 }
-h1,h2,h3,h4,h5,h6{
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     color: black;
 }
-p{
+
+p {
     color: black;
     font-family: 'Sarabun';
     font-size: 17px;
 }
+
 header {
     background-color: #ffc3cb;
 }
@@ -50,13 +62,16 @@ header {
     animation: blinkShadow 1.5s infinite;
     margin-top: 20px;
 }
+
 @keyframes blinkShadow {
     0% {
         text-shadow: 0 0 10px #ffffff, 0 0 20px #ffffff, 0 0 30px #ff0000, 0 0 40px #ff0000;
     }
+
     50% {
         text-shadow: 0 0 5px #ff0000, 0 0 10px #ff4500, 0 0 20px #ff4500, 0 0 30px #ff4500;
     }
+
     100% {
         text-shadow: 0 0 10px #ffffff, 0 0 20px #ffffff, 0 0 30px #ff0000, 0 0 40px #ff0000;
     }
@@ -95,15 +110,21 @@ header {
     animation: fall linear infinite;
     opacity: 0.8;
 }
+
 .round-snowflake {
-    background-color: white; /* Màu bông tuyết */
-    border-radius: 50%; /* Hình tròn */
-    box-shadow: 0 0 10px rgba(255, 255, 255, 0.8); /* Hiệu ứng ánh sáng */
+    background-color: white;
+    /* Màu bông tuyết */
+    border-radius: 50%;
+    /* Hình tròn */
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+    /* Hiệu ứng ánh sáng */
 }
+
 @keyframes fall {
     0% {
         transform: translateY(-100%);
     }
+
     100% {
         transform: translateY(100vh);
     }
@@ -123,15 +144,21 @@ header {
     animation: fall linear infinite;
     opacity: 0.8;
 }
+
 .round-satanflake {
-    background-color: white; /* Màu bông tuyết */
-    border-radius: 50%; /* Hình tròn */
-    box-shadow: 0 0 10px rgba(255, 255, 255, 0.8); /* Hiệu ứng ánh sáng */
+    background-color: white;
+    /* Màu bông tuyết */
+    border-radius: 50%;
+    /* Hình tròn */
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+    /* Hiệu ứng ánh sáng */
 }
+
 @keyframes fall {
     0% {
         transform: translateY(-100%);
     }
+
     100% {
         transform: translateY(100vh);
     }
@@ -151,15 +178,21 @@ header {
     animation: fall linear infinite;
     opacity: 0.8;
 }
+
 .round-pinetreeflake {
-    background-color: white; /* Màu bông tuyết */
-    border-radius: 50%; /* Hình tròn */
-    box-shadow: 0 0 10px rgba(255, 255, 255, 0.8); /* Hiệu ứng ánh sáng */
+    background-color: white;
+    /* Màu bông tuyết */
+    border-radius: 50%;
+    /* Hình tròn */
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+    /* Hiệu ứng ánh sáng */
 }
+
 @keyframes fall {
     0% {
         transform: translateY(-100%);
     }
+
     100% {
         transform: translateY(100vh);
     }
@@ -180,15 +213,21 @@ header {
     animation: fall linear infinite;
     opacity: 0.8;
 }
+
 .round-snowmanflake {
-    background-color: white; /* Màu bông tuyết */
-    border-radius: 50%; /* Hình tròn */
-    box-shadow: 0 0 10px rgba(255, 255, 255, 0.8); /* Hiệu ứng ánh sáng */
+    background-color: white;
+    /* Màu bông tuyết */
+    border-radius: 50%;
+    /* Hình tròn */
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+    /* Hiệu ứng ánh sáng */
 }
+
 @keyframes fall {
     0% {
         transform: translateY(-100%);
     }
+
     100% {
         transform: translateY(100vh);
     }
@@ -209,15 +248,21 @@ header {
     animation: fall linear infinite;
     opacity: 0.8;
 }
+
 .round-reindeerflake {
-    background-color: white; /* Màu bông tuyết */
-    border-radius: 50%; /* Hình tròn */
-    box-shadow: 0 0 10px rgba(255, 255, 255, 0.8); /* Hiệu ứng ánh sáng */
+    background-color: white;
+    /* Màu bông tuyết */
+    border-radius: 50%;
+    /* Hình tròn */
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+    /* Hiệu ứng ánh sáng */
 }
+
 @keyframes fall {
     0% {
         transform: translateY(-100%);
     }
+
     100% {
         transform: translateY(100vh);
     }
@@ -237,15 +282,21 @@ header {
     animation: fall linear infinite;
     opacity: 0.8;
 }
+
 .round-socksflake {
-    background-color: white; /* Màu bông tuyết */
-    border-radius: 50%; /* Hình tròn */
-    box-shadow: 0 0 10px rgba(255, 255, 255, 0.8); /* Hiệu ứng ánh sáng */
+    background-color: white;
+    /* Màu bông tuyết */
+    border-radius: 50%;
+    /* Hình tròn */
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+    /* Hiệu ứng ánh sáng */
 }
+
 @keyframes fall {
     0% {
         transform: translateY(-100%);
     }
+
     100% {
         transform: translateY(100vh);
     }
@@ -265,15 +316,21 @@ header {
     animation: fall linear infinite;
     opacity: 0.8;
 }
+
 .round-giftflake {
-    background-color: white; /* Màu bông tuyết */
-    border-radius: 50%; /* Hình tròn */
-    box-shadow: 0 0 10px rgba(255, 255, 255, 0.8); /* Hiệu ứng ánh sáng */
+    background-color: white;
+    /* Màu bông tuyết */
+    border-radius: 50%;
+    /* Hình tròn */
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+    /* Hiệu ứng ánh sáng */
 }
+
 @keyframes fall {
     0% {
         transform: translateY(-100%);
     }
+
     100% {
         transform: translateY(100vh);
     }
@@ -292,34 +349,48 @@ header {
     background-color: #ff6f61;
     transform: scale(1.1);
 }
+
 #countdown {
     font-weight: bold;
     letter-spacing: 2px;
     position: relative;
-    z-index: 2; /* Đảm bảo countdown nằm trên ảnh */
-    color: #ff3e3e; /* Màu chữ của countdown */
+    z-index: 2;
+    /* Đảm bảo countdown nằm trên ảnh */
+    color: #ff3e3e;
+    /* Màu chữ của countdown */
 }
+
 .full-background {
     position: relative;
-    background-size: cover; /* Đảm bảo ảnh nền phủ toàn bộ màn hình */
-    background-position: center; /* Căn giữa ảnh nền */
-    height: 100vh; /* Đảm bảo chiều cao của phần tử bằng chiều cao màn hình */
+    background-size: cover;
+    /* Đảm bảo ảnh nền phủ toàn bộ màn hình */
+    background-position: center;
+    /* Căn giữa ảnh nền */
+    height: 100vh;
+    /* Đảm bảo chiều cao của phần tử bằng chiều cao màn hình */
     /* display: flex; */
     justify-content: center;
     align-items: center;
-    overflow: hidden; /* Đảm bảo ảnh không bị tràn ra ngoài */
-    
+    overflow: hidden;
+    /* Đảm bảo ảnh không bị tràn ra ngoài */
+
 }
+
 .overlay-image {
     position: absolute;
-    width: 50%; /* Đảm bảo kích thước đám mây hợp lý */
-    object-fit: contain; /* Giữ tỷ lệ ảnh */
+    width: 50%;
+    /* Đảm bảo kích thước đám mây hợp lý */
+    object-fit: contain;
+    /* Giữ tỷ lệ ảnh */
 }
+
 .cloud-container {
     /* position: relative; */
     width: 100%;
-    height: 100%; /* Chiều cao toàn màn hình */
+    height: 100%;
+    /* Chiều cao toàn màn hình */
 }
+
 /* Vị trí cho các đám mây */
 .cloud-1 {
     left: -4px;
@@ -332,47 +403,53 @@ header {
     bottom: -37px;
     animation: moveClouds2 8s linear infinite;
 }
+
 .cloud-3 {
     right: 21%;
     bottom: -37px;
     animation: moveClouds3 7s linear infinite;
 }
+
 .cloud-4 {
     right: -5%;
     bottom: -37px;
     animation: moveClouds4 6s linear infinite;
 }
 
-.ongnoel{
+.ongnoel {
     display: block;
     z-index: 99999999;
     bottom: 0;
     position: absolute;
-    animation: moveNoel 5s linear infinite; 
+    animation: moveNoel 5s linear infinite;
 }
-.bongtuyet{
+
+.bongtuyet {
     display: block;
     bottom: 40px;
     left: 14%;
     position: absolute;
     transform: rotate(-21deg);
-    animation: movebongtuyet 5s linear infinite; 
+    animation: movebongtuyet 5s linear infinite;
     animation-fill-mode: forwards;
 }
-.khungtuyet{
+
+.khungtuyet {
     position: absolute;
     display: block;
     top: 0;
     width: 50%;
     right: 0;
 }
-.khungtuyet1{
+
+.khungtuyet1 {
     position: absolute;
     display: block;
     top: 0;
     width: 50%;
     left: 0;
 }
+
 .full-background::before {
     content: '';
     position: absolute;
@@ -380,215 +457,328 @@ header {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.5); /* Overlay màu đen với độ trong suốt */
-    z-index: -1; /* Đưa overlay ra sau nội dung */
+    background: rgba(0, 0, 0, 0.5);
+    /* Overlay màu đen với độ trong suốt */
+    z-index: -1;
+    /* Đưa overlay ra sau nội dung */
 }
+
 @keyframes moveClouds1 {
     0% {
-        transform: translateX(0); /* Bắt đầu ở vị trí ban đầu */
+        transform: translateX(0);
+        /* Bắt đầu ở vị trí ban đầu */
     }
+
     25% {
-        transform: translateX(-2%); /* Di chuyển nhẹ sang trái */
+        transform: translateX(-2%);
+        /* Di chuyển nhẹ sang trái */
     }
+
     50% {
-        transform: translateX(0); /* Quay lại vị trí ban đầu */
+        transform: translateX(0);
+        /* Quay lại vị trí ban đầu */
     }
+
     75% {
-        transform: translateX(0.5%); /* Di chuyển nhẹ sang phải */
+        transform: translateX(0.5%);
+        /* Di chuyển nhẹ sang phải */
     }
+
     100% {
-        transform: translateX(0); /* Quay lại vị trí ban đầu */
-    }
-}
-@keyframes moveClouds2 {
-    0% {
-        transform: translateX(0); /* Bắt đầu ở vị trí ban đầu */
-    }
-    25% {
-        transform: translateX(-2%); /* Di chuyển nhẹ sang trái */
-    }
-    50% {
-        transform: translateX(0); /* Quay lại vị trí ban đầu */
-    }
-    75% {
-        transform: translateX(2%); /* Di chuyển nhẹ sang phải */
-    }
-    100% {
-        transform: translateX(0); /* Quay lại vị trí ban đầu */
-    }
-}
-@keyframes moveClouds3 {
-    0% {
-        transform: translateX(0); /* Bắt đầu ở vị trí ban đầu */
-    }
-    25% {
-        transform: translateX(-3%); /* Di chuyển nhẹ sang trái */
-    }
-    50% {
-        transform: translateX(0); /* Quay lại vị trí ban đầu */
-    }
-    75% {
-        transform: translateX(3%); /* Di chuyển nhẹ sang phải */
-    }
-    100% {
-        transform: translateX(0); /* Quay lại vị trí ban đầu */
-    }
-}
-@keyframes moveClouds4 {
-    0% {
-        transform: translateX(0); /* Bắt đầu ở vị trí ban đầu */
-    }
-    25% {
-        transform: translateX(-3%); /* Di chuyển nhẹ sang trái */
-    }
-    50% {
-        transform: translateX(0); /* Quay lại vị trí ban đầu */
-    }
-    75% {
-        transform: translateX(3%); /* Di chuyển nhẹ sang phải */
-    }
-    100% {
-        transform: translateX(0); /* Quay lại vị trí ban đầu */
-    }
-}
-@keyframes movebongtuyet {
-    0% {
-        transform: translateX(0) rotate(-21deg); /* Vị trí ban đầu */
-    }
-    25% {
-        transform: translateX(-2%) rotate(-21deg); /* Sang trái */
-    }
-    50% {
-        transform: translateX(3%) rotate(-21deg); /* Quay lại */
-    }
-    75% {
-        transform: translateX(2%) rotate(-21deg); /* Sang phải */
-    }
-    100% {
-        transform: translateX(0) rotate(-21deg); /* Quay về vị trí ban đầu */
-    }
-}
-@keyframes moveNoel {
-    0% {
-        transform: translateX(0); /* Bắt đầu ở vị trí ban đầu */
-    }
-    25% {
-        transform: translateX(-2%); /* Di chuyển nhẹ sang trái */
-    }
-    50% {
-        transform: translateX(3%); /* Quay lại vị trí ban đầu */
-    }
-    75% {
-        transform: translateX(2%); /* Di chuyển nhẹ sang phải */
-    }
-    100% {
-        transform: translateX(0); /* Quay lại vị trí ban đầu */
-    }
-}
-@keyframes moveMaygiao {
-    0% {
-        transform: translateY(-40%); /* Bắt đầu với vị trí dịch lên */
-    }
-    25% {
-        transform: translateY(calc(-40% - 7px)); /* Dịch lên thêm */
-    }
-    50% {
-        transform: translateY(calc(-40% + 7px)); /* Dịch xuống */
-    }
-    75% {
-        transform: translateY(calc(-40% - 7px)); /* Dịch lên lại */
-    }
-    100% {
-        transform: translateY(-40%); /* Quay lại vị trí dịch lên ban đầu */
+        transform: translateX(0);
+        /* Quay lại vị trí ban đầu */
     }
 }
 
-.maygiaonhau { 
+@keyframes moveClouds2 {
+    0% {
+        transform: translateX(0);
+        /* Bắt đầu ở vị trí ban đầu */
+    }
+
+    25% {
+        transform: translateX(-2%);
+        /* Di chuyển nhẹ sang trái */
+    }
+
+    50% {
+        transform: translateX(0);
+        /* Quay lại vị trí ban đầu */
+    }
+
+    75% {
+        transform: translateX(2%);
+        /* Di chuyển nhẹ sang phải */
+    }
+
+    100% {
+        transform: translateX(0);
+        /* Quay lại vị trí ban đầu */
+    }
+}
+
+@keyframes moveClouds3 {
+    0% {
+        transform: translateX(0);
+        /* Bắt đầu ở vị trí ban đầu */
+    }
+
+    25% {
+        transform: translateX(-3%);
+        /* Di chuyển nhẹ sang trái */
+    }
+
+    50% {
+        transform: translateX(0);
+        /* Quay lại vị trí ban đầu */
+    }
+
+    75% {
+        transform: translateX(3%);
+        /* Di chuyển nhẹ sang phải */
+    }
+
+    100% {
+        transform: translateX(0);
+        /* Quay lại vị trí ban đầu */
+    }
+}
+
+@keyframes moveClouds4 {
+    0% {
+        transform: translateX(0);
+        /* Bắt đầu ở vị trí ban đầu */
+    }
+
+    25% {
+        transform: translateX(-3%);
+        /* Di chuyển nhẹ sang trái */
+    }
+
+    50% {
+        transform: translateX(0);
+        /* Quay lại vị trí ban đầu */
+    }
+
+    75% {
+        transform: translateX(3%);
+        /* Di chuyển nhẹ sang phải */
+    }
+
+    100% {
+        transform: translateX(0);
+        /* Quay lại vị trí ban đầu */
+    }
+}
+
+@keyframes movebongtuyet {
+    0% {
+        transform: translateX(0) rotate(-21deg);
+        /* Vị trí ban đầu */
+    }
+
+    25% {
+        transform: translateX(-2%) rotate(-21deg);
+        /* Sang trái */
+    }
+
+    50% {
+        transform: translateX(3%) rotate(-21deg);
+        /* Quay lại */
+    }
+
+    75% {
+        transform: translateX(2%) rotate(-21deg);
+        /* Sang phải */
+    }
+
+    100% {
+        transform: translateX(0) rotate(-21deg);
+        /* Quay về vị trí ban đầu */
+    }
+}
+
+@keyframes moveNoel {
+    0% {
+        transform: translateX(0);
+        /* Bắt đầu ở vị trí ban đầu */
+    }
+
+    25% {
+        transform: translateX(-2%);
+        /* Di chuyển nhẹ sang trái */
+    }
+
+    50% {
+        transform: translateX(3%);
+        /* Quay lại vị trí ban đầu */
+    }
+
+    75% {
+        transform: translateX(2%);
+        /* Di chuyển nhẹ sang phải */
+    }
+
+    100% {
+        transform: translateX(0);
+        /* Quay lại vị trí ban đầu */
+    }
+}
+
+@keyframes moveMaygiao {
+    0% {
+        transform: translateY(-40%);
+        /* Bắt đầu với vị trí dịch lên */
+    }
+
+    25% {
+        transform: translateY(calc(-40% - 7px));
+        /* Dịch lên thêm */
+    }
+
+    50% {
+        transform: translateY(calc(-40% + 7px));
+        /* Dịch xuống */
+    }
+
+    75% {
+        transform: translateY(calc(-40% - 7px));
+        /* Dịch lên lại */
+    }
+
+    100% {
+        transform: translateY(-40%);
+        /* Quay lại vị trí dịch lên ban đầu */
+    }
+}
+
+.maygiaonhau {
     position: absolute;
     display: flex;
-    justify-content: center; /* Căn giữa nội dung theo chiều ngang */
-    align-items: center; /* Căn giữa nội dung theo chiều dọc */
-    height: 100vh; /* Chiều cao chiếm toàn bộ chiều cao màn hình */
-    width: 100%; /* Chiều rộng chiếm toàn bộ màn hình */
+    justify-content: center;
+    /* Căn giữa nội dung theo chiều ngang */
+    align-items: center;
+    /* Căn giữa nội dung theo chiều dọc */
+    height: 100vh;
+    /* Chiều cao chiếm toàn bộ chiều cao màn hình */
+    width: 100%;
+    /* Chiều rộng chiếm toàn bộ màn hình */
     z-index: 1;
-    animation: moveMaygiao 7s ease-in-out infinite; /* Hiệu ứng chuyển động */
+    animation: moveMaygiao 7s ease-in-out infinite;
+    /* Hiệu ứng chuyển động */
 }
 
 .maygiao {
     position: relative;
-    max-width: 100%; /* Đảm bảo ảnh không vượt quá chiều rộng khung cha */
-    object-fit: contain; /* Đảm bảo ảnh giữ đúng tỷ lệ */
+    max-width: 100%;
+    /* Đảm bảo ảnh không vượt quá chiều rộng khung cha */
+    object-fit: contain;
+    /* Đảm bảo ảnh giữ đúng tỷ lệ */
 }
+
 @media screen and (max-width: 480px) {
     .cloud-1 {
         bottom: -5px;
     }
+
     .cloud-2 {
         bottom: 6px;
     }
+
     .cloud-3 {
         bottom: 0px;
     }
+
     .cloud-4 {
         bottom: 2px;
     }
+
     .maygiaonhau {
-        height: 18vh; /* Giảm chiều cao trên màn hình nhỏ nhất */
+        height: 18vh;
+        /* Giảm chiều cao trên màn hình nhỏ nhất */
     }
+
     .full-background {
-        height: 26vh /* Giảm chiều cao trên màn hình nhỏ hơn */
+        height: 26vh
+            /* Giảm chiều cao trên màn hình nhỏ hơn */
     }
 }
+
 @media screen and (min-width: 480px) {
     .maygiaonhau {
-        height: 18vh; /* Giảm chiều cao trên màn hình nhỏ nhất */
+        height: 18vh;
+        /* Giảm chiều cao trên màn hình nhỏ nhất */
     }
+
     .full-background {
-        height: 36vh /* Giảm chiều cao trên màn hình nhỏ hơn */
+        height: 36vh
+            /* Giảm chiều cao trên màn hình nhỏ hơn */
     }
 }
+
 @media screen and (min-width: 576px) {
     .maygiaonhau {
-        height: 27vh; /* Giảm chiều cao trên màn hình nhỏ hơn */
+        height: 27vh;
+        /* Giảm chiều cao trên màn hình nhỏ hơn */
     }
+
     .full-background {
-        height: 43vh; /* Giảm chiều cao trên màn hình nhỏ hơn */
+        height: 43vh;
+        /* Giảm chiều cao trên màn hình nhỏ hơn */
     }
 }
+
 @media screen and (min-width: 768px) {
     .maygiaonhau {
-        height: 27vh; /* Giảm chiều cao trên màn hình nhỏ hơn */
+        height: 27vh;
+        /* Giảm chiều cao trên màn hình nhỏ hơn */
     }
+
     .full-background {
-        height: 57vh; /* Giảm chiều cao trên màn hình nhỏ hơn */
+        height: 57vh;
+        /* Giảm chiều cao trên màn hình nhỏ hơn */
     }
 }
+
 @media screen and (min-width: 992px) {
     .maygiaonhau {
-        height: 27vh; /* Giảm chiều cao trên màn hình nhỏ hơn */
+        height: 27vh;
+        /* Giảm chiều cao trên màn hình nhỏ hơn */
     }
+
     .full-background {
-        height: 80vh; /* Giảm chiều cao trên màn hình nhỏ hơn */
+        height: 80vh;
+        /* Giảm chiều cao trên màn hình nhỏ hơn */
     }
 }
+
 @media screen and (min-width: 1200px) {
     .maygiaonhau {
-        height: 27vh; /* Giảm chiều cao trên màn hình nhỏ hơn */
+        height: 27vh;
+        /* Giảm chiều cao trên màn hình nhỏ hơn */
     }
+
     .full-background {
-        height: 98vh; /* Giảm chiều cao trên màn hình nhỏ hơn */
+        height: 98vh;
+        /* Giảm chiều cao trên màn hình nhỏ hơn */
     }
 }
+
 @media screen and (min-width: 1400px) {
     .maygiaonhau {
-        height: 27vh; /* Giảm chiều cao trên màn hình nhỏ hơn */
+        height: 27vh;
+        /* Giảm chiều cao trên màn hình nhỏ hơn */
     }
+
     .full-background {
-        height: 100vh; /* Giảm chiều cao trên màn hình nhỏ hơn */
+        height: 100vh;
+        /* Giảm chiều cao trên màn hình nhỏ hơn */
     }
 }
+
 /* Khởi đầu ẩn */
-.animate-left, .animate-right {
+.animate-left,
+.animate-right {
     opacity: 0;
     transform: translateX(-150%);
     transition: transform 2s ease, opacity 3s ease;
@@ -614,14 +804,17 @@ header {
 .animate-right.show {
     transition-delay: 0.3s;
 }
-.imageborder{
+
+.imageborder {
     border-radius: 30px;
 }
-.main-footer{
+
+.main-footer {
     height: 432px;
     margin: 0 auto;
     padding: 0;
 }
+
 .footer {
     height: -webkit-fill-available;
     position: relative;
@@ -630,32 +823,38 @@ header {
     background-repeat: no-repeat;
     background-position: center;
 }
-.footer-right{
+
+.footer-right {
     height: -webkit-fill-available;
     background-image: url(../image/nen7-2.png);
     background-size: cover;
     background-repeat: no-repeat;
 }
+
 @media screen and (max-width: 1081px) {
     .footer {
         height: auto;
     }
-    .footer-right{
+
+    .footer-right {
         height: auto;
     }
 }
+
 @media screen and (max-width: 768px) {
     .footer {
         height: inherit;
     }
-    .footer-right{
+
+    .footer-right {
         height: inherit;
     }
 }
 
-.contact{
+.contact {
     justify-content: center;
 }
+
 .content-footer {
     width: 100%;
     text-align: center;
@@ -682,13 +881,15 @@ header {
     padding: 20px;
     font-size: 30px;
 }
+
 /* Đặt nút hộp quà bên trái và giữa footer */
 .gift-btn {
     position: absolute;
     top: 78%;
     left: 46%;
     transform: translate(-50%, -50%);
-    background-color: #ff0000; /* Màu nền đỏ */
+    background-color: #ff0000;
+    /* Màu nền đỏ */
     color: #fff;
     font-size: 20px;
     font-weight: bold;
@@ -700,7 +901,8 @@ header {
 }
 
 .gift-btn:hover {
-    background-color: #d40000; /* Màu khi hover */
+    background-color: #d40000;
+    /* Màu khi hover */
     transform: translate(-50%, -50%) scale(1.1);
 }
 
@@ -764,26 +966,54 @@ button {
 }
 
 @keyframes float {
-    0%, 100% { transform: translateY(0) rotate(-10deg); }
-    50% { transform: translateY(-10px) rotate(-10deg); }
+
+    0%,
+    100% {
+        transform: translateY(0) rotate(-10deg);
+    }
+
+    50% {
+        transform: translateY(-10px) rotate(-10deg);
+    }
 }
 
 @keyframes blink {
-    from { opacity: 1; }
-    to { opacity: 0.5; }
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0.5;
+    }
 }
 
 @keyframes wiggle {
-    0%, 100% { transform: rotate(-8deg); }
-    50% { transform: rotate(8deg); }
+
+    0%,
+    100% {
+        transform: rotate(-8deg);
+    }
+
+    50% {
+        transform: rotate(8deg);
+    }
 }
 
 @keyframes pulse {
-    0% { transform: scale(1); }
-    50% { transform: scale(1.2); }
-    100% { transform: scale(1); }
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.2);
+    }
+
+    100% {
+        transform: scale(1);
+    }
 }
-.loichuc{
+
+.loichuc {
     font-family: "Fleur De Leah", cursive;
     font-weight: bold;
 }
@@ -792,32 +1022,32 @@ button {
 
 .hidden {
     display: none;
-  }
-  
-  .wishCard.show {
+}
+
+.wishCard.show {
     display: block;
-  }
-  
-  a {
+}
+
+a {
     position: fixed;
     bottom: 0;
     width: 100%;
     text-align: center;
     padding: 10px 0;
-    font-family:'Times New Roman', Times, serif;
+    font-family: 'Times New Roman', Times, serif;
     font-size: 12px;
     color: #ffffff;
-  }
+}
 
-  .color1 {
+.color1 {
     color: #1bbc9b;
-  }
-  
-  .color2 {
+}
+
+.color2 {
     color: #c0392b;
-  }
-  
-  .card {
+}
+
+.card {
     color: #013243;
     position: absolute;
     font-family: 'Times New Roman', Times, serif;
@@ -830,17 +1060,17 @@ button {
     transform-style: preserve-3d;
     transform: translate(-50%, -50%) perspective(2000px);
     box-shadow: inset 300px 0 50px rgba(0, 0, 0, 0.5),
-      20px 0 60px rgba(0, 0, 0, 0.5);
+        20px 0 60px rgba(0, 0, 0, 0.5);
     transition: 1s;
-  }
-  
-  .card:hover {
+}
+
+.card:hover {
     transform: translate(-50%, -50%) perspective(2000px) rotate(15deg) scale(1.2);
     box-shadow: inset 20px 0 50px rgba(0, 0, 0, 0.5),
-      0 10px 100px rgba(0, 0, 0, 0.5);
-  }
-  
-  .card:before {
+        0 10px 100px rgba(0, 0, 0, 0.5);
+}
+
+.card:before {
     content: "";
     position: absolute;
     top: -5px;
@@ -850,9 +1080,9 @@ button {
     background: #bac1ba;
     transform-origin: bottom;
     transform: skewX(-45deg);
-  }
-  
-  .card:after {
+}
+
+.card:after {
     content: "";
     position: absolute;
     top: 0;
@@ -862,41 +1092,41 @@ button {
     background: #92a29c;
     transform-origin: left;
     transform: skewY(-45deg);
-  }
-  
-  .card .imgBox {
+}
+
+.card .imgBox {
     width: 100%;
     height: 100%;
     position: relative;
     transform-origin: left;
     transition: 0.7s;
-  }
-  
-  .card .bark {
+}
+
+.card .bark {
     position: absolute;
     background: #e0e1dc;
     width: 100%;
     height: 100%;
     opacity: 0;
     transition: 0.7s;
-  }
-  
-  .card .imgBox img {
+}
+
+.card .imgBox img {
     min-width: 250px;
     max-height: 400px;
-  }
-  
-  .card:hover .imgBox {
+}
+
+.card:hover .imgBox {
     transform: rotateY(-135deg);
-  }
-  
-  .card:hover .bark {
+}
+
+.card:hover .bark {
     opacity: 1;
     transition: 0.6s;
     box-shadow: 300px 200px 100px rgba(0, 0, 0, 0.4) inset;
-  }
-  
-  .card .details {
+}
+
+.card .details {
     position: absolute;
     top: 0;
     left: 0;
@@ -905,26 +1135,28 @@ button {
     z-index: -1;
     margin-top: 70px;
     width: 100%;
-  }
-  
-  .card .details p {
+}
+
+.card .details p {
     font-size: 15px;
     padding: 0 20px 0 20px;
-  }
-  
-  .card .details h4 {
+}
+
+.card .details h4 {
     text-align: center;
     font-size: 20px;
     font-family: "Amatic SC", cursive !important;
-  }
+}
 
-  .text-right {
+.text-right {
     text-align: right;
-  }
-  .text-left {
+}
+
+.text-left {
     text-align: left;
-  }
-  #closeCard{
+}
+
+#closeCard {
     top: -78px;
     display: flex;
     position: absolute;
@@ -932,4 +1164,93 @@ button {
     background: transparent;
     color: black;
     font-size: 24px;
-  }
+}
+
+/* Responsive */
+@media screen and (max-width : 768px) {
+    .mute-icon {
+        font-size: 32px;
+        top: 0;
+        left: 88%;
+        z-index: 5;
+    }
+
+    .blinking-text {
+        font-size: 42px;
+        margin-top: 8px;
+    }
+
+    h1 {
+        font-size: 32px;
+    }
+
+    p {
+        font-family: 'Sarabun';
+        font-size: 14px;
+    }
+
+    .text-countdown {
+        font-size: 17px;
+    }
+
+    .text-center>p {
+        font-family: 'Geofanny';
+        font-size: 28px;
+    }
+
+    .wish {
+        display: none;
+    }
+
+    .content-footer h1 {
+        font-size: 38px;
+        margin-top: 70px;
+        margin-bottom: 0;
+    }
+
+    .content-footer p:nth-child(2) {
+        font-size: 14px;
+        margin-bottom: 0;
+    }
+
+    .content-footer p:nth-child(3) {
+        font-size: 32px !important;
+        margin-bottom: 0;
+    }
+}
+
+@media screen and (max-width : 426px) {
+    .mute-icon {
+        font-size: 20px;
+        top: 0;
+        left: 85%;
+        z-index: 5;
+    }
+
+    .blinking-text {
+        font-size: 22px;
+        margin-top: 8px;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    p {
+        font-family: 'Sarabun';
+        font-size: 12px;
+    }
+
+    .text-countdown {
+        font-size: 18px;
+    }
+
+    .text-center>p {
+        font-family: 'Geofanny';
+        font-size: 28px;
+    }
+
+    .wish {
+        display: none;
+    }
+}
