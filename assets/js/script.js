@@ -354,13 +354,21 @@ window.onload = function () {
     wishNode.style.animation = `${getRandomAnimation()} 3s ease-in-out infinite, blink 1s infinite alternate`;
 
     // Random position
-    const maxX = tree.clientWidth - 150;
-    const maxY = tree.clientHeight - 150;
-    const posX = Math.random() * maxX;
-    const posY = Math.random() * maxY;
+    function setRandomPosition() {
+      const maxX = tree.clientWidth - 150;
+      const maxY = tree.clientHeight - 150;
+      const posX = Math.random() * maxX;
+      const posY = Math.random() * maxY;
 
-    wishNode.style.left = `${posX}px`;
-    wishNode.style.top = `${posY}px`;
+      wishNode.style.left = `${posX}px`;
+      wishNode.style.top = `${posY}px`;
+    }
+
+    // Đặt vị trí ngẫu nhiên ban đầu
+    setRandomPosition();
+
+    // Đặt lại vị trí khi thay đổi kích thước cửa sổ
+    window.addEventListener("resize", setRandomPosition);
 
     // Thêm sự kiện click để hiển thị thiệp
     wishNode.addEventListener("click", function () {
@@ -392,6 +400,7 @@ window.onload = function () {
 };
 
 
+
 function addWish() {
   const wishInput = document.getElementById("wish");
   const wishText = wishInput.value.trim();
@@ -406,10 +415,6 @@ function addWish() {
   wishNode.className = "wish";
 
   const uniqueID = `wish-${Date.now()}`;
-  // wishNode.innerHTML = `<button class="wish-btn" data-id="${uniqueID}">📜 ${wishText.substring(
-  //   0,
-  //   50
-  // )}${wishText.length > 50 ? "..." : ""}</button>`;
   wishNode.innerHTML = `<div class="wish-btn" data-id="${uniqueID}" style="cursor: pointer;"><strong>📜 </strong>${wishText.substring(0, 50)}${wishText.length > 50 ? "..." : ""}</div>`;
 
   wishNode.querySelector(".wish-btn").addEventListener("click", function () {
